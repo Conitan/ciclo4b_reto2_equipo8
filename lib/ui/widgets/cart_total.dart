@@ -8,12 +8,12 @@ class CartTotal extends StatelessWidget {
   final ShoppingController shoppingController = Get.find();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return const Expanded(
       child: Center(
         //TODO
         // aquí debemos observar la variable total del shoppingController
         child: Text('Total: xx usd',
-            style: const TextStyle(
+            style: TextStyle(
                 fontSize: 25.0,
                 color: Colors.blueGrey,
                 letterSpacing: 2.0,

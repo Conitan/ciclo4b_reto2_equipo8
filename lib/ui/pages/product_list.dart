@@ -24,7 +24,7 @@ class _ProductListState extends State<ProductList> {
             Stack(
               children: [const CustomBanner(50), customAppBar()],
             ),
-            // TODO
+            // TODO - Jesus David
             // aquí debemos rodear el widget Expanded en un Obx para
             // observar los cambios en la lista de entries del shoppingController
             Expanded(
@@ -73,7 +73,7 @@ class _ProductListState extends State<ProductList> {
           children: [
             IconButton(
                 onPressed: () {
-                  // TODO
+                  // TODO - Carlos Fernando
                   // aquí debemos llamar al método del controlador que
                   // incrementa el número de unidades del producto
                   // pasandole el product.id
@@ -81,7 +81,7 @@ class _ProductListState extends State<ProductList> {
                 icon: const Icon(Icons.arrow_upward)),
             IconButton(
                 onPressed: () {
-                  // TODO
+                  // TODO - Carlos Fernando
                   // aquí debemos llamar al método del controlador que
                   // disminuye el número de unidades del producto
                   // pasandole el product.id

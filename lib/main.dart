@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loggy/loggy.dart';
-
 import 'ui/app.dart';
 import 'ui/controllers/shopping_controller.dart';
 
@@ -12,7 +11,7 @@ void main() {
       showColors: true,
     ),
   );
-  // TODO
+  // TODO Omar Yesid
   // agregar el ShoppingController al DI de Get
   runApp(const MyApp());
 }

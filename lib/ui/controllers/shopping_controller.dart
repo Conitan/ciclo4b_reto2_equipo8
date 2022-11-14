@@ -19,14 +19,14 @@ class ShoppingController extends GetxController {
 
   void calcularTotal() {
     int newTotal = 0;
-    // TODO
+    // TODO - Jose
     // calcular el valor total de los elementos en el carro de compras
     total.value = newTotal;
   }
 
   agregarProducto(id) {
     logInfo('agregarProducto $id');
-    // TODO
+    // TODO - Jose
     // Encontrar el elemento usando el id, revisar el método firstWhere de la lista
     // después obtener el index de ese elemento, revisar el método indexOf de la lista
     // después hacer el incremento en la cantidad
@@ -36,7 +36,7 @@ class ShoppingController extends GetxController {
 
   quitarProducto(id) {
     logInfo('quitarProducto $id');
-    // TODO
+    // TODO - Jose
     // similar a agregarProducto
     // validar cuando la cantidad es igual a cero
     calcularTotal();
