@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:loggy/loggy.dart';
 
@@ -19,26 +20,35 @@ class ShoppingController extends GetxController {
 
   void calcularTotal() {
     int newTotal = 0;
-    // TODO - Jose
+    // TODO
     // calcular el valor total de los elementos en el carro de compras
+    for (var i = 0; i < entries.length; i++) {
+      newTotal += entries[i].price * entries[i].quantity.value;
+    }
     total.value = newTotal;
   }
 
   agregarProducto(id) {
     logInfo('agregarProducto $id');
-    // TODO - Jose
+    // TODO
     // Encontrar el elemento usando el id, revisar el método firstWhere de la lista
     // después obtener el index de ese elemento, revisar el método indexOf de la lista
     // después hacer el incremento en la cantidad
     // finalmente actualizar entries usando el indice y el elemento actualizado
+    int aux =
+        entries.indexOf(entries.firstWhere((element) => element.id == id));
+    entries[aux].quantity += 1;
     calcularTotal();
   }
 
   quitarProducto(id) {
     logInfo('quitarProducto $id');
-    // TODO - Jose
+    // TODO
     // similar a agregarProducto
     // validar cuando la cantidad es igual a cero
+    int aux =
+        entries.indexOf(entries.firstWhere((element) => element.id == id));
+    entries[aux].quantity.value == 0 ? 0 : entries[aux].quantity -= 1;
     calcularTotal();
   }
 }
