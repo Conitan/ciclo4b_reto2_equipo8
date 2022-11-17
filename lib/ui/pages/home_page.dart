@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
       const SizedBox(
         height: 60,
       ),
-      const Text("Brad Wilson",
+      const Text("Equipo 8",
           style: TextStyle(
               fontSize: 25.0,
               color: Colors.blueGrey,
@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
         height: 20,
       ),
       const Text(
-        "Kilcoole, Waterford",
+        "Mision Tic 2022",
         style: TextStyle(
             fontSize: 18.0,
             color: Colors.black45,

@@ -25,16 +25,24 @@ class _ProductListState extends State<ProductList> {
               children: [const CustomBanner(50), customAppBar()],
             ),
             // TODO - Jesus David
-            // aquí debemos rodear el widget Expanded en un Obx para
-            // observar los cambios en la lista de entries del shoppingController
-            Obx(() => Expanded(
-                  child: ListView.builder(
-                      padding: const EdgeInsets.all(8),
-                      itemCount: shoppingController.entries.length,
-                      itemBuilder: (context, index) {
-                        return _row(shoppingController.entries[index], index);
-                      }),
-                ))
+            // No se agrego ningun Obx en esta parte, ya que no funcionaba.
+            // El Obx que observa los cambios del array entries esta mas abajo.
+            // Obx(() => Expanded(
+            //       child: ListView.builder(
+            //           padding: const EdgeInsets.all(8),
+            //           itemCount: shoppingController.entries.length,
+            //           itemBuilder: (context, index) {
+            //             return _row(shoppingController.entries[index], index);
+            //           }),
+            //     )),
+            Expanded(
+              child: ListView.builder(
+                  padding: const EdgeInsets.all(8),
+                  itemCount: shoppingController.entries.length,
+                  itemBuilder: (context, index) {
+                    return _row(shoppingController.entries[index], index);
+                  }),
+            )
           ],
         ),
       ),
@@ -77,6 +85,7 @@ class _ProductListState extends State<ProductList> {
                   // aquí debemos llamar al método del controlador que
                   // incrementa el número de unidades del producto
                   // pasandole el product.id
+                  shoppingController.agregarProducto(product.id);
                 },
                 icon: const Icon(Icons.add_circle)),
             IconButton(
@@ -85,6 +94,7 @@ class _ProductListState extends State<ProductList> {
                   // aquí debemos llamar al método del controlador que
                   // disminuye el número de unidades del producto
                   // pasandole el product.id
+                  shoppingController.quitarProducto(product.id);
                 },
                 icon: const Icon(Icons.remove_circle))
           ],
@@ -98,6 +108,7 @@ class _ProductListState extends State<ProductList> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               // child: Text(product.quantity.toString()),
+              // TODO - Jose Pineda
               child: Obx(() => Text(product.quantity.toString())),
             ),
           ],

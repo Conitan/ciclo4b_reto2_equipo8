@@ -11,7 +11,8 @@ void main() {
       showColors: true,
     ),
   );
-  // TODO Omar Yesid
+  // TODO - Omar Yesid
   // agregar el ShoppingController al DI de Get
+  Get.put(ShoppingController());
   runApp(const MyApp());
 }
