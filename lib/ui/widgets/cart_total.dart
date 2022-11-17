@@ -7,17 +7,16 @@ class CartTotal extends StatelessWidget {
   final ShoppingController shoppingController = Get.find();
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return const Expanded(
       child: Center(
-        //TODO
-        // aquí debemos observar la variable total del shoppingController
-        child: Obx(() => Text('Total: ${shoppingController.total.value} \$',
-            style: const TextStyle(
-                fontSize: 25.0,
-                color: Colors.blueGrey,
-                letterSpacing: 2.0,
-                fontWeight: FontWeight.w400))),
-      ),
+          //TODO
+          // aquí debemos observar la variable total del shoppingController
+          child: Text('Total: 0 \$',
+              style: TextStyle(
+                  fontSize: 25.0,
+                  color: Colors.blueGrey,
+                  letterSpacing: 2.0,
+                  fontWeight: FontWeight.w400))),
     );
   }
 }
