@@ -27,14 +27,14 @@ class _ProductListState extends State<ProductList> {
             // TODO - Jesus David
             // aquí debemos rodear el widget Expanded en un Obx para
             // observar los cambios en la lista de entries del shoppingController
-            Expanded(
-              child: ListView.builder(
-                  padding: const EdgeInsets.all(8),
-                  itemCount: shoppingController.entries.length,
-                  itemBuilder: (context, index) {
-                    return _row(shoppingController.entries[index], index);
-                  }),
-            ),
+            Obx(() => Expanded(
+                  child: ListView.builder(
+                      padding: const EdgeInsets.all(8),
+                      itemCount: shoppingController.entries.length,
+                      itemBuilder: (context, index) {
+                        return _row(shoppingController.entries[index], index);
+                      }),
+                ))
           ],
         ),
       ),
@@ -78,7 +78,7 @@ class _ProductListState extends State<ProductList> {
                   // incrementa el número de unidades del producto
                   // pasandole el product.id
                 },
-                icon: const Icon(Icons.arrow_upward)),
+                icon: const Icon(Icons.add_circle)),
             IconButton(
                 onPressed: () {
                   // TODO - Carlos Fernando
@@ -86,7 +86,7 @@ class _ProductListState extends State<ProductList> {
                   // disminuye el número de unidades del producto
                   // pasandole el product.id
                 },
-                icon: const Icon(Icons.arrow_downward))
+                icon: const Icon(Icons.remove_circle))
           ],
         ),
         Column(
