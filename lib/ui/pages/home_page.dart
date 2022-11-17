@@ -44,10 +44,10 @@ class HomePage extends StatelessWidget {
       children: const [
         CustomBanner(200),
         CircleAvatar(
-          radius: 60.0,
           backgroundColor: Colors.transparent,
           backgroundImage: NetworkImage(
               "https://cdn-icons-png.flaticon.com/512/2919/2919600.png"),
+          radius: 60.0,
         )
       ],
     );
