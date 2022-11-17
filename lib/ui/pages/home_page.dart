@@ -40,13 +40,14 @@ class HomePage extends StatelessWidget {
 
   Widget buildProfileImage() {
     return Stack(
-      alignment: Alignment.bottomCenter,
+      alignment: Alignment.center,
       children: const [
         CustomBanner(200),
         CircleAvatar(
-          backgroundImage:
-              NetworkImage("https://randomuser.me/api/portraits/men/75.jpg"),
           radius: 60.0,
+          backgroundColor: Colors.transparent,
+          backgroundImage: NetworkImage(
+              "https://cdn-icons-png.flaticon.com/512/2919/2919600.png"),
         )
       ],
     );
@@ -59,7 +60,7 @@ class HomePage extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: GestureDetector(
-            onTap: () => Get.to(() => ProductList(),
+            onTap: () => Get.to(() => const ProductList(),
                 transition: Transition.circularReveal,
                 duration: const Duration(seconds: 1)),
             child: const Icon(
