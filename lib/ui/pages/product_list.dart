@@ -34,7 +34,7 @@ class _ProductListState extends State<ProductList> {
                   itemBuilder: (context, index) {
                     return _row(shoppingController.entries[index], index);
                   }),
-            )
+            ),
           ],
         ),
       ),
@@ -93,11 +93,12 @@ class _ProductListState extends State<ProductList> {
           children: [
             const Padding(
               padding: EdgeInsets.all(8.0),
-              child: Text("Quantity"),
+              child: Text("Cantidad"),
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(product.quantity.toString()),
+              // child: Text(product.quantity.toString()),
+              child: Obx(() => Text(product.quantity.toString())),
             ),
           ],
         )
