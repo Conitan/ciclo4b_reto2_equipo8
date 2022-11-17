@@ -45,9 +45,9 @@ class HomePage extends StatelessWidget {
         CustomBanner(200),
         CircleAvatar(
           backgroundColor: Colors.transparent,
-          radius: 60.0,
           backgroundImage: NetworkImage(
               "https://cdn-icons-png.flaticon.com/512/2919/2919600.png"),
+          radius: 60.0,
         )
       ],
     );
